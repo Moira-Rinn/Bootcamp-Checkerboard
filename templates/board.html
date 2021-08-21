@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  {% set count = namespace(value=0) %}
+  {% set color1_str = "" %}
+
+<!-- {# To be debugged #} -->
+
+<!-- {#
+  {% for val in color1 %}
+    {% set count.value = count.value + 1 %}
+    {% if count.value < len(color1)-1 %}
+    <div class="even">{{count.value}}</div>
+      {% set color1_str = color1_str + val + ", " %}
+    {% else %}
+      {% set color1_str = color1_str + val %}
+    {% endif %}
+  {% endfor %}
+  #} -->
+
+
+<div class="container">
+  <div id="wrapper">
+    {% for squ in range(x) %}
+      <div class="board_x">
+      {% if y % 2 == 0 %}
+        {% set count.value = count.value + 1 %}
+      {% endif %}
+
+        {% for col in range((y)) %}
+          {% set count.value = count.value + 1 %}
+          {% if count.value % 2 == 0 %}
+            <div
+            class="even">
+            <!-- {# style="background-color: rgba({{color1_str}})" #}-->
+            </div>
+          {% else %}
+            <div class="odd">
+            <!-- {# style="background-color: rgba(0,0,0,0.4)" #}-->
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

@@ -34,21 +34,26 @@ body {
 }
 
 .board_x {
-  border-right: 1px solid #ffd700;
-  border-bottom: 1px solid #ffd700;
+  border: 1px solid #ffd700;
+  /* border-right: 1px solid #ffd700;
+  border-bottom: 1px solid #ffd700; */
+  /* opacity: 0.6; */
 }
 
 .odd {
   width: 5em;
   height: 5em;
-  background-color: rgba(12, 11, 11, 0.4);
+  background-color: #111;
+  opacity: .6;
   border-top: 1px solid #ffd700;
   border-left: 1px solid #ffd700;
 }
 .even {
   width: 5em;
   height: 5em;
-  background-color: rgba(136, 0, 0, 0.4);
+  background-color: #880000;
+  opacity: .6;
+  /* background-color: rgb(136, 0, 0); */
   border-top: 1px solid #ffd700;
   border-left: 1px solid #ffd700;
 }
